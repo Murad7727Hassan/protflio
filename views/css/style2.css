@@ -1,0 +1,604 @@
+/* strat variables */
+:root
+{
+    --main-color: #2F2F2F;
+    --secondary-color:#303131;
+    --font-header-color:#CCCCCC;
+    --font-content-color:#808899;
+    --color-dark: #042954;
+    --active-color:#FBD214;
+    font-weight: bold;
+    line-height: 50px;
+}
+/* end variables */
+/* start global rules  */
+*
+{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+.container
+{
+    padding:20px 50px;
+}
+h1,h2,i,h4
+{
+    color: var(--font-header-color);
+}
+p{
+    color: var(--font-content-color);
+}
+ 
+/* start header  */
+header
+{
+    background-color: var(--main-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: -2px 0px 10px #00000091;
+    z-index: 1000;
+}
+header .container 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+header .container div
+{
+    display: flex;
+    align-items: center;
+}
+.logo img
+{
+    width: 60px;
+    height: 50px;
+}
+nav ul
+{
+    list-style: none;
+    padding-right: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+nav ul li,.taps ul li
+{
+    display: inline-block;
+    padding: 0 10px;
+}
+nav ul li a
+{
+    color: var(--font-content-color);
+}
+.active,nav ul li a:hover,.taps ul li:hover,.icos span i:hover
+{
+    color: var(--active-color);
+    cursor: pointer;
+}
+.orders ,.orders ul
+{
+    display: flex;
+    font-size: 20px;
+}
+.orders ul
+{
+    margin-left: 110px;
+}
+.orders ul li
+{
+    padding: 0 15px;
+    font-size: 25px;
+}
+.orders .lang
+{
+    display: none;
+}
+.orders a
+{
+   border: .5px solid var(--active-color); 
+   padding: 10px 20px;
+   border-radius: 100px;
+}
+.orders ul,.orders a
+{
+    margin-left: 40px;
+    line-height: 0;
+}
+.orders a span i
+{
+    padding-right:10px ;
+    color: var(--active-color);
+}
+.orders a:hover span i,.orders a:hover 
+{
+    color: white;
+    background-color: var(--active-color);
+}
+/* end header  */
+/* start main  */
+/* start home */
+#home,#about,#skills
+{
+    height: 89vh;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+}
+#home .container, #about .container, #skills .container, #serives .deitles-serives {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#home .txt
+{
+    padding-top: 5.5rem;
+}
+#home .txt p,#about .container p
+{ 
+    padding-top: 10px;
+}
+/* end home */
+
+/* strat sentains */
+#sentains,#skills
+{
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+/* end sentains */
+/* strat about */
+  
+#about .txt
+{
+    padding-right: 15rem;
+}
+#about img
+{
+    width: 350px;
+    height: 90%;
+  transform: rotateY(
+    180deg
+    );}
+    #about .row
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 50px;
+    }
+    #about .row p
+    {
+        width: 60%;
+    }
+    #about .row i
+    {
+        padding-right: 2rem;
+        font-size: 1.5rem;
+    }
+/* end about */
+/* start skills */
+#skills
+{
+    text-align: right;
+    padding: 0%;
+    margin: 0;
+}
+#skills .container
+{
+    padding: 7rem 0;
+}
+#skills .txt{
+    padding: 0px 100px;
+}
+#skills ul
+{
+    width: 600px;
+    list-style: none;
+    margin:75px auto;
+}
+#skills ul li
+{
+    margin: 20px auto;
+    color: var(--active-color);
+}
+#skills ul li .bar
+{
+    background-color: #353b48;
+    display: block;
+    height: 5px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #f7cf1587;;
+}
+#skills ul li .bar span
+{
+    height: 2px;
+    float:right;
+    background-color: var(--active-color);
+}
+ @-webkit-keyframes UI-UX
+{
+    0%
+    {
+        width: 0;
+    }
+   100%
+    {
+        width: 90%;
+    }
+}
+@-webkit-keyframes Front-End
+{
+    0%
+    {
+        width: 0;
+    }
+   100%
+    {
+        width: 50%;
+    }
+}
+@-webkit-keyframes Back-End
+{
+    0%
+    {
+        width: 0;
+    }
+   100%
+    {
+        width: 10%;
+    }
+}
+ /* end skills */
+ /* start serives */
+ #serives, #proojects,#contact
+ {
+     background-color: var(--secondary-color);
+ }
+#serives .txt,#proojects .container .txt ,#contact .container .txt 
+{
+    text-align: center;
+}
+.deitles-serives
+{
+    justify-content: space-around;
+    align-items: center;
+    color: var(--font-content-color);
+    margin: 20px auto;
+}
+.deitles-serives > div
+{
+    background-color: var(--secondary-color);
+    padding: 2rem 5rem;
+    line-height: 45px;
+    border: 5px solid var(--font-content-color);
+}
+.deitles-serives .txt
+{
+    text-align: center;
+}
+.deitles-serives .txt i
+{
+    font-size: 5rem;
+}
+
+.deitles-serives > div .link
+{
+    text-align: center;
+}
+.deitles-serives > div .link a
+{
+    color: var(--active-color);
+}
+.deitles-serives > div .link a span i
+{
+    padding-right:15px;
+    padding-top: 2rem;
+    color: var(--active-color);
+}
+ /* end serives  */
+
+ /* start proojects */
+#proojects .list-img 
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 50px ;
+}
+.taps
+{
+    color: var(--font-content-color);
+}
+#proojects .list-img > div 
+{
+    padding:20px;
+}
+#proojects .list-img > div img
+{
+  width: 250px;
+  height: 250px;
+}
+#proojects .list-img > div img:hover 
+{
+    cursor: pointer;
+}
+ /* end proojects */
+
+ /* start contact */
+ #contact .container .logo
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center
+ }
+ .conemail
+ {
+     text-align: center;
+     padding: 1rem 0;
+ }
+ .conemail form
+ {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+ .conemail form input,.conemail form button
+ {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border: 0.5px;
+    border-radius: 20px;
+    background-color: var(--font-header-color);
+    background-color: #fdfdfd;
+    width: 300px;
+    box-shadow: -1px 0px 3px 0px #2f2f2f;
+}
+.conemail form button
+ {
+    width: 150px;
+    background-color: var(--active-color);
+ }
+.conemail form input:hover,.conemail form input:focus
+{
+    border: .5px  solid var(--active-color);
+    outline: 0;
+}
+ .icos
+ {
+     font-size: 25px;
+     text-align: center;
+     margin-top: 10px;
+ }
+ .icos span
+ {
+     padding: 25px 15px;
+
+ }
+ /* end contact */
+
+/* strat footer  */
+footer 
+{
+    height: 80px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--main-color);
+}
+/* end foooter  */
+
+/* start media  */
+
+/* strat media qury  */
+
+/* small  devices */
+/* Mobile devices */
+@media (min-width:280px)
+{
+    .orders ul 
+    {
+        display: none;
+    }
+}
+@media (min-width:320px)
+{
+    #home .container > div:nth-child(2),#about img
+    {
+        display: none;
+    }
+    :root
+    {
+        font-size: 10px;
+    }
+    .container {
+        padding: 20px 20px;
+    }
+    #home, #about, #skills {
+        height: 100vh;
+        background-color: var(--secondary-color);
+    }
+    /* start header  */
+    nav
+    {
+        display: none;
+    }
+    .orders ul
+    {
+        margin: 0;
+    }
+    .orders ul, .orders a {
+        margin-left: 0px; 
+        line-height: 1;
+        font-size: 12px;
+        padding: 16px;
+        width: 120px;
+    }
+    .orders a span i {
+        display: inline;
+    }
+    /* start main  */
+    #home .container, #about .container, #skills .container, #serives .deitles-serives {
+         flex-direction: column;
+         flex-wrap: nowrap;
+     }
+     #home .container > div
+     {
+         height: 68vh;
+     }
+     #home .txt {
+        padding-top: 0rem;
+    }
+    #home img ,#about .list-img
+    {
+      display: none;
+    }
+    #about img {
+        width: 300px;
+    }
+    #about .txt {
+        padding: 0;
+    }
+    #about .row p {
+        width: auto;
+    }
+    #about .row {
+         flex-wrap: nowrap;
+         padding-top: 20px;
+     }
+     #about .row > div {
+         width: 50%;
+     }
+
+     #skills .container {
+        padding: 0rem 20px;
+    }
+    #skills .txt {
+        padding: 0px ;
+    }
+    #skills ul {
+        width: 100%;
+        margin: 0;
+    }
+    .deitles-serives > div {
+        margin-bottom: 50px;
+        width: 60vw;
+        padding: 30px;
+    }
+    #proojects .list-img {
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+} 
+
+/* medium devices */
+/* 481px — 768px: iPads, Tablets */
+@media (min-width:480px)
+{
+    .container {
+        padding: 20px 30px;
+    }
+    nav   {
+        display: block;
+    }
+    .orders ul {
+        display: flex;
+    }
+    .orders ul li i
+    {
+        font-size: 1rem;
+    }
+    .orders ul li i:hover
+    {
+        cursor:pointer ;
+        color: var(--active-color);
+    }
+    #home .container > div {
+        height: 51.5vh;
+    }
+    #home .txt {
+        padding-top: 7rem;
+    }
+    #home .container, #about .container, #skills .container, #serives .deitles-serives {
+        flex-direction: row;
+    }
+    #home img, #about .list-img {
+        width: 50vw;
+        height: 100vh;
+        display: block;
+    }
+    #about img {
+        width: 200px;
+    }
+    #about .txt {
+         padding-right: 7rem;
+    }
+    #about .row p {
+        width: 60%;
+    }
+    #skills .container > div {
+        padding: 0px;
+        width: 50%;
+    }
+    #skills ul {
+        width: 100%;
+        padding: 0 60px;
+        margin-top: 70px;
+        line-height: 2.5;
+    }
+    .deitles-serives > div {
+        margin-bottom: 0;
+        width: 23vw;
+     }
+     #proojects .list-img {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* 769px — 1024px: Small screens, laptops */
+@media(min-width:769px)
+{
+    :root
+    {
+        font-size: 17px;
+    }
+    #home, #about, #skills {
+        height: 100vh;
+        background-color: var(--secondary-color);
+    }
+    #home
+    {
+        height: 120vh;
+    }
+    #home .container > div {
+        height: 100vh;
+        width: 50%;
+    }
+    #home .container > div:nth-child(2),#about img
+    {
+        display: block;
+    }
+    #home img, #about .list-img {
+        width: 80%;
+        height: 100%;
+        padding-bottom: 0;
+        transform: translateX(-200px);
+    }
+    #skills
+    {
+        height: 80vh;
+        padding-top: 3rem;
+    }
+}
+/* end media quary  */

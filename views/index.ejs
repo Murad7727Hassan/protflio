@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="مصمم ومطور ويب ">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Murad Hassan Ali Al-modia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio</title>
+     <!--  google font  -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" href="all.min.css">
+      <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+      <!-- file normalize -->
+      <link rel="stylesheet" href="normalize.css">
+     <!-- main file -->
+     <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- strat header  -->
+    <header>
+        <div class="container">
+             <!-- strat logo  -->
+        <div>
+        <div class="logo">
+            <img src="/images/<%= user[0].logo  %>" alt="">
+        </div>
+        <!-- end logo  -->
+
+        <!-- strat nav  -->
+        <nav>
+            <ul>
+               <li><a href="#home" class="active">الرئيسية</a></li>
+               <li><a href="#about">عني</a></li>
+               <li><a href="#skills">مهاراتي</a></li>
+                <li><a href="#services">خدماتي</a></li>
+                <li><a href="proojects">اعمالي</a></li>
+                <li><a href="contact">التواصل</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- end nav  -->
+    
+    <!-- start order service  -->
+    <div class="orders">
+        <ul>
+            <li>
+                    <i class="fas fa-globe-europe"  id="light" onclick="myFunction_set()"></i>
+                </li>
+                <li>
+                    <i class="fas fa-sun" onclick="myFunction_get()"></i>
+                </li>
+            </ul>
+                  <a href="<%= user[0].url_order  %>" class="active">طلب خدمة
+            <span>
+                <i class="fas fa-shopping-cart"></i>
+            </span>
+        </a>
+        </div>
+        <!-- end  order service  -->
+        </div>
+       
+    </header>
+    <!-- end haeder  -->
+
+    <!-- satrt main  -->
+    <main>
+        <!-- strat genral  information -->
+        <section id="home">
+            <div class="container">
+            <div class="txt">
+                <h2 class="active">سلام عليكم</h2>
+                <h1>  <%= user[0].name  %>  </h1>
+                <h2>
+                    <%= user[0].job  %>
+                </h2>
+                <p>  <%= user[0].about_person  %> </p>
+            </div>
+            <div>
+                <img src="/images/<%= user[0].images_person  %>" alt="">
+            </div>
+        </div>
+        </section>
+        <!-- end genral information -->
+
+        <!-- start sentains  -->
+        <section id="sentains">
+            <div class="container">
+             <h1> <%= user[0].spcial_sentence  %></h2>
+            </div>
+        </section>
+        <!-- end sentains  -->
+
+        <!-- strat about me  -->
+        <section id="about">
+            <div class="container">
+            <div>
+                <img src="/images/<%= user[0].images_person  %>" alt="">
+            </div>
+            <div class="txt">
+                <h1 class="active">عني</h1>
+                  <p>
+                    <%= user[0].about_work  %>
+                  </p>
+                  <div class="row">
+                     
+                  </div>  
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- end about me  -->
+
+        <!-- strat my skilles -->
+        <section id="skills">
+            <div class="container">
+                <div class="txt">
+                    <h1 class="active">مهاراتي</h1>
+                    <p> <%= user[0].about_skill  %></p>
+                 </div>
+                <div class="skills"> 
+                    <ul>
+                        <% for( let index = 0; index < skill.length; index++ ) { %>
+                            <li>
+                                <h3><%= skill[index].skill  %>  </h3>
+                                <span class="bar">
+                                    <span style="width:calc(<%= skill[index].number  %>%) "></span>
+                                </span>
+                             </li>
+                        <% } %>
+                       
+                        
+                         
+                    </ul>      
+                </div>
+            </div>
+        </section>
+        <!-- end my skilles  -->
+
+        <!-- start my serives  -->
+        <section id="serives">
+            <div class="container">
+                <div class="txt">
+                    <h1 class="active">خدماتي التي اقدمها</h1>
+                    <p>اهم الخدمات التي استطيع ان انفذها لك عزيز العميل هي الخدمات التالية:</p>    
+                </div>
+                <div class="row deitles-serives">
+                    <div>
+                        <div class="txt">
+                            <i class="fab fa-codepen"></i>
+                            <br> 
+                            <h3><%= service[0].name %></h3>
+                        </div>
+                        <p>سوف تحصل في الخدمة :</p>
+                        <ul>
+                            <li>تحديد متلطلبات المشروع</li>
+                            <li>رسم
+                                <span>USE CASE</span>
+                            </li>
+                            <li>رسم <span>DFD</span></li>
+                            <li>رسم ERD</li>
+                            <li>وثيقة<span>SRS</span></li>
+                        </ul>
+                        <div class="link">
+                            <a href="" >
+                                <span>اقراء المزيد</span>
+                                <span>
+                                    <i class="fas fa-arrow-left"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="txt">
+                            <i class="fas fa-laptop"></i>
+                            <br>
+                            <h3>خدمة تصميم <span>UI/UX</span></h3>
+                        </div>
+                        <p>سوف تحصل في الخدمة :</p>
+                        <ul>
+                            <li>رسم <span>SCATCH</span><li>
+                            <li>تصميم واجهات  المستخدم<li>
+                            <li>تصميم <span>Prototype</span><li>
+                            <li>وثيقة<span>SDS</span></li>
+                            <li>`</li>
+                                 
+                             
+                        </ul>
+                        <div class="link">
+                            <a href="" >
+                                <span>اقراء المزيد</span>
+                                <span>
+                                    <i class="fas fa-arrow-left"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="txt">
+                            <i class="fas fa-laptop-code"></i>
+                            <br>
+                            <h3>خدمة تطوير الويب</h3>
+                        </div>
+                        <p>سوف تحصل في الخدمة :</p>
+                        <ul>
+                            <li>تحويل التصميم الى موقع فعال<li>
+                            <li>تصميم <span>front-end</span><li>
+                            <li>تكويد <span>back-end</span><li>
+                            <li>ربط قاعدة البيانات<li>
+                            <li>استضافة على السيرفر <li>
+                            <li><li>
+                        </ul>
+                        <div class="link">
+                            <a href="" >
+                                <span>اقراء المزيد</span>
+                                <span>
+                                    <i class="fas fa-arrow-left"></i>
+                                </span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end my serives -->
+
+        <!-- strat my proojects -->
+        <section id="proojects">
+            <div class="container">
+                <div class="txt">
+                    <h1>اعمالي التي قمت بها</h1>
+                    <p>هنا اعرض لك معرض اعمالي التي قمت بها فم بأخذ نظرة :</p>
+                    <div class="taps">
+                        <ul>
+                            <li class="active">الكل</li>
+                            <% for( let index = 0; index < work.length; index++ ) { %>
+                                <li><%=  work[index].name %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-img">
+                    <% for( let index = 0; index < work.length; index++ ) { %>
+                        <div>
+                            <img src="/images/<%=  work[index].image  %>" alt="">
+                        </div>
+                    <% } %>
+                </div>
+                
+            </div>
+        </section>
+        <!-- end my proojects -->
+
+        <!-- strat connaction -->
+        <section id="contact">
+            <div class="container">
+                <div class="txt">
+                    <h1>التواصل</h1>
+                    <p>اسعد بتواصلكم الدائم</p>
+                </div>
+               
+                <div>
+                    <div class="logo">
+                        <img src="/images/<%=  user[0].logo  %>" alt="">
+                    </div>   
+                    <div class="conemail">
+                        <p>انضم الى النشرة البريدية</p>
+                        <form action="">
+                            <input type="text" name="" id="name" placeholder="ادخال الاسم الخاص بك">
+                            <input type="email" name="" id="email" placeholder="ادخال الايميل الخاص بك">
+                            <button id="myBtn"> ارسال</button>
+                        </form>
+                    </div>   
+                     <div class="icos">
+                        <span>
+                            <i class="fab fa-facebook"></i> 
+                         </span>
+                        <span>
+                            <i class="fab fa-instagram"></i> 
+                        </span>
+                        <span>
+                            <i class="fab fa-twitter"></i>  
+                        </span>
+                        <span>
+                            <i class="fab fa-linkedin-in"></i>
+                        </span>
+                    </div>
+                   
+                </div>
+            </div>
+         
+        </section>
+        <!-- end connaction -->
+
+    </main>
+    <!-- end main  -->
+
+    <!-- strat footer  -->
+    <footer>
+        <p>جميع الحقوق محفوظة لدى مراد حسن </p>
+    </footer>
+    <!-- end footer  -->
+    <script src="js/main.js"></script>
+</body>
+</html>

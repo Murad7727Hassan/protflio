@@ -1,0 +1,207 @@
+:root
+{
+ --main-color:#F5F5F5;
+ --secondery-color:#009688;
+ --font-color:#136f6e;
+}
+body
+{
+    background-color: var(--main-color);
+ }
+ header
+ {
+     position: fixed;
+     top: 0;
+     width: 100vw;
+     z-index: 100;
+ }
+header,footer
+{
+    background-color: var(--font-color);
+    color: var(--main-color);
+}
+.main-color
+{
+    background-color: var(--main-color);
+}
+.content{
+    margin-top: 56px;
+}
+.secondery-color
+{
+    background-color: var(--secondery-color);
+}
+.font-color
+{
+    color: var(--font-color);
+}
+.img-h
+{
+    width: 100%;
+    height: 52vh;
+}
+.navbar-expand-lg .navbar-nav .nav-link,.navbar-brand 
+{
+    color: var(--main-color);
+}
+.navbar-toggler {
+    border: 1px solid var(--main-color);
+}
+a
+{
+    color: var(--font-color);
+    background-color:inherit;
+}
+.btn-primary {
+    color: #fff;
+    background-color: var(--font-color);
+    border-color: var(--secondery-color);
+}
+.btn-primary:active,
+.btn-primary:hover
+{
+    background-color: var(--secondery-color);
+    border-color: var(--secondery-color);
+}
+.btn-outline-primary {
+    color: var(--font-color);
+    border-color: var(--font-color);
+}
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--font-color);
+    border-color: var(--font-color);
+}
+.btn-login .btn-outline-primary {
+    color: #fff;
+    background-color: var(--font-color);
+    border-color: var(--main-color);
+}
+.text-primary {
+    --bs-text-opacity: 1;
+    color: var(--font-color);
+}
+.table-striped>tbody>tr td:first-child
+{
+    width: 20px;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg:var(--secondery-color);
+    color: var(--main-color);
+}
+.table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--main-color);
+    color: var(--font-color);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+ .table-striped>tbody>tr a {
+    background-color: transparent;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--font-color);
+    outline: 0;
+ }
+.form-select
+{
+    border-radius: 0;
+}
+.form-select:focus {
+    border-color: var(--font-color);
+    outline: 0;
+    box-shadow: 0;
+ }
+.btn-outline-secondary {
+    color: #fff;
+    background-color: var(--font-color);
+    border-color: var(--font-color);
+}
+.bg-w 
+{
+    background-color: white;
+}
+
+.connact .card-img, .card-img-top {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+.services .card-img, .services-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+}
+/* strart about */
+.about
+{
+    background-size: cover;
+     position: relative;
+     background: linear-gradient( 
+        198deg
+         , rgba(2,0,36,1) 0%, rgb(9 121 114 / 95%) 35%, rgb(77 114 77 / 67%) 98%);
+color: white;
+}
+.bk-botton .container
+{
+    color: var(--main-color);
+}
+.above
+{
+    transform: translateY(-px);
+}
+.above .container{
+    background-color:white;
+    border-radius: 20px;
+    color: var(--font-color);
+}
+.Subscribe
+{ 
+    background: linear-gradient( 
+    198deg
+     , rgba(2,0,36,1) 0%, rgb(9 121 114 / 95%) 35%, rgb(77 114 77 / 67%) 98%);
+    color: white;
+}
+.Subscribe .btn-outline-primary
+{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+.Subscribe .btn-outline-primary:hover
+{
+background-color: var(--secondery-color);
+
+}
+ .login
+ {
+      width: 450px;
+      margin: auto;
+  }
+  .navbar .navbar-brand .collapse .navbar-nav .active
+{
+    color: rgb(85, 65, 65);
+    background-color: red;
+}
+section li 
+{
+    margin-bottom: .5rem;
+}
+section li a
+{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.2rem;
+  }
+
+
+
+
+
+
+
+
+
